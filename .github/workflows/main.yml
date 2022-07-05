@@ -24,7 +24,7 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
           source_file: 'a.txt'
-          destination_repo: 'ro1y/release-test'
+          destination_repo: 'ro1y/gitroly'
           user_email: 'ro1y@protonmail.ch'
           user_name: 'ro1y'
           commit_message: 'Uploading 88x31 lizt'

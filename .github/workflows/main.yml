@@ -19,12 +19,6 @@ jobs:
         run:
           ls > a.txt
       - name: archive
-        uses: dmnemec/copy_file_to_another_repo_action@main
+      - uses: mikeal/publish-to-github-action@master
         env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source_file: 'a.txt'
-          destination_repo: 'ro1y/gitroly'
-          user_email: 'ro1y@protonmail.ch'
-          user_name: 'ro1y'
-          commit_message: 'Uploading 88x31 lizt'
+          GITHUB_TOKEN: ${{ secrets.API_TOKEN_GITHUB }}

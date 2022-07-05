@@ -19,7 +19,12 @@ jobs:
         run:
           ls > a.txt
       - name: archive
-        uses: actions/upload-artifact@v3
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          name: list-files
-          path: a.txt
+          source_file: 'a.txt'
+          destination_repo: 'ro1y/release-test'
+          user_email: 'ro1y@protonmail.ch'
+          user_name: 'ro1y'
+          commit_message: 'Uploading 88x31 lizt'
